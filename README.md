@@ -1,16 +1,76 @@
-# React + Vite
+# Générateur de Nombres Premiers
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Application React pour générer et vérifier des nombres premiers avec une architecture moderne.
 
-Currently, two official plugins are available:
+## Technologies
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React 19
+- Vite
+- TanStack Router
+- TanStack Query
+- Zustand
+- Zod
+- Tailwind CSS
 
-## React Compiler
+## Architecture
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Le projet suit le pattern Atomic Design :
 
-## Expanding the ESLint configuration
+- **Atoms** : Composants de base (Button, Input, Badge, Heading, etc.)
+- **Molecules** : Groupes d'atomes (FeatureCard, PrimeResult, etc.)
+- **Organisms** : Sections complexes (Header, Footer, Hero, etc.)
+- **Templates** : Mises en page (Layout, HomeTemplate, PrimesTemplate)
+- **Pages** : Instances avec données réelles
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Structure du projet
+
+```
+src/
+├── components/
+│   ├── atoms/
+│   ├── molecules/
+│   ├── organisms/
+│   └── templates/
+├── pages/
+├── routes/
+├── hooks/
+├── stores/
+├── schemas/
+├── service/
+└── api/
+```
+
+## Fonctionnalités
+
+- Génération de nombres aléatoires via API simulée
+- Vérification manuelle de nombres premiers
+- Validation des données avec Zod
+- Gestion d'état avec Zustand
+- Cache et optimisation avec TanStack Query
+- Navigation responsive avec menu mobile
+
+## Installation
+
+```bash
+npm install
+```
+
+## Développement
+
+```bash
+npm run dev
+```
+
+## Build
+
+```bash
+npm run build
+```
+
+## Principes
+
+- Séparation des responsabilités
+- Composants réutilisables
+- État centralisé
+- Validation stricte des données
+- Performance optimisée avec useMemo et cache
