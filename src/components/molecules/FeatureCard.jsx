@@ -1,4 +1,4 @@
-import { Badge, Heading, Text, Card } from "../atoms/index.js";
+import { Badge, Heading, Typography, Card } from "../atoms/index.js";
 
 /**
  * Molecule: FeatureCard
@@ -20,9 +20,9 @@ export function FeatureCard({ icon, title, description, color, delay = 0 }) {
       <Heading level={3} className="text-blue-900 mb-2">
         {title}
       </Heading>
-      <Text variant="primary" size="sm" className="leading-relaxed">
+      <Typography variant="primary" size="sm" className="leading-relaxed">
         {description}
-      </Text>
+      </Typography>
     </Card>
   );
 }

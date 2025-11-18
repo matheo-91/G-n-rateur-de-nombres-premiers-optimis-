@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { usePrimeStore } from "../../stores/usePrimeStore.js";
 import { inputNumberSchema } from "../../schemas/numberSchema.js";
-import { Heading, Card, Button } from "../atoms/index.js";
+import { Heading, Card, Button, Typography } from "../atoms/index.js";
 import { NumberInputForm, PrimeResult } from "../molecules/index.js";
 
 /**
@@ -32,10 +32,13 @@ export function PrimeChecker() {
 
   return (
     <div className="space-y-6">
-      <Card>
-        <Heading level={2} className="text-gray-800 mb-4">
-          Vérifier un nombre manuellement
+      <Card hover className="border border-blue-100">
+        <Heading level={2} className="text-blue-900 mb-4">
+          🔍 Vérifier un nombre manuellement
         </Heading>
+        <Typography variant="muted" size="sm" className="mb-6">
+          Entrez n'importe quel nombre entier positif pour vérifier s'il est premier
+        </Typography>
         
         <NumberInputForm
           value={inputValue}
@@ -47,7 +50,7 @@ export function PrimeChecker() {
       </Card>
 
       {currentNumber !== null && (
-        <div>
+        <div className="fade-in">
           <PrimeResult number={currentNumber} isPrime={isPrimeResult} />
           <div className="mt-4 text-center">
             <Button onClick={clearNumber} variant="secondary">

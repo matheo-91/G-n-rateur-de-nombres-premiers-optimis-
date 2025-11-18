@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Logo, Heading, Text, Button } from "../atoms/index.js";
+import { Logo, Heading, Typography, Button } from "../atoms/index.js";
 
 /**
  * Organism: Hero
@@ -15,9 +15,9 @@ export function Hero({ logoSrc, title, subtitle, primaryCTA, secondaryCTA }) {
         {title.line1}
         <span className="block text-blue-600 mt-2">{title.line2}</span>
       </Heading>
-      <Text variant="primary" size="xl" className="mb-8 max-w-2xl mx-auto">
+      <Typography variant="primary" size="xl" className="mb-8 max-w-2xl mx-auto">
         {subtitle}
-      </Text>
+      </Typography>
       <div className="flex flex-col sm:flex-row gap-4 justify-center">
         <Link to={primaryCTA.link}>
           <Button 

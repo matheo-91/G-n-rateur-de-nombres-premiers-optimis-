@@ -68,9 +68,62 @@ body {
   animation: fadeIn 0.5s ease-out;
 }
 
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slide-down {
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+.pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Smooth transitions pour tous les éléments interactifs */
+button, a, input {
+  transition: all 0.2s ease-in-out;
+}
+
 /* Focus visible pour l'accessibilité */
 *:focus-visible {
   outline: 2px solid #3b82f6;
   outline-offset: 2px;
   border-radius: 4px;
+}
+
+/* Animation pour les cartes */
+@keyframes cardHover {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-4px);
+  }
+}
+
+/* Effet de hover sur les cartes */
+.hover-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
 }

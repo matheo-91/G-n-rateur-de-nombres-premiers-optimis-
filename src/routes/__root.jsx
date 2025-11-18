@@ -18,43 +18,7 @@ function RootComponent() {
 
   return (
     <>
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-blue-100 to-blue-200 flex flex-col">
-        {/* Navigation */}
-        <nav className="bg-white/80 backdrop-blur-md shadow-md border-b border-blue-200 sticky top-0 z-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex justify-between items-center h-16">
-              <div className="flex items-center">
-                <Link to="/" className="flex items-center space-x-2">
-                  <img src={logo} alt="Prime Generator Logo" className="w-10 h-10" />
-                  <span className="text-xl font-bold text-blue-900">
-                    Prime Generator
-                  </span>
-                </Link>
-              </div>
-              <div className="hidden sm:flex sm:space-x-8">
-                <Link
-                  to="/"
-                  className="text-blue-700 hover:text-blue-900 inline-flex items-center px-3 py-2 border-b-2 border-transparent text-sm font-medium transition-colors"
-                  activeProps={{
-                    className: "border-blue-500 text-blue-900 font-semibold",
-                  }}
-                >
-                  Accueil
-                </Link>
-                <Link
-                  to="/primes"
-                  className="text-blue-700 hover:text-blue-900 inline-flex items-center px-3 py-2 border-b-2 border-transparent text-sm font-medium transition-colors"
-                  activeProps={{
-                    className: "border-blue-500 text-blue-900 font-semibold",
-                  }}
-                >
-                  Nombres Premiers
-                </Link>
-              </div>
-            </div>
-          </div>
-        </nav>
-
+      <div className="min-h-screen flex flex-col">
         {/* Main Content */}
         <main className="flex-grow">
           <Outlet />

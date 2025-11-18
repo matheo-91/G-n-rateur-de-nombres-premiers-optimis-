@@ -1,7 +1,7 @@
 import { useEffect, useMemo } from "react";
 import { usePrimeStore } from "../../stores/usePrimeStore.js";
 import { usePrimeAlea } from "../../hooks/usePrimeAlea.jsx";
-import { Heading, Card, Button, Text } from "../atoms/index.js";
+import { Heading, Card, Button, Typography } from "../atoms/index.js";
 
 /**
  * Organism: ApiNumberGenerator
@@ -31,10 +31,13 @@ export function ApiNumberGenerator() {
   };
 
   return (
-    <Card>
-      <Heading level={2} className="text-gray-800 mb-4">
-        Nombre aléatoire depuis l'API
+    <Card hover className="border border-blue-100">
+      <Heading level={2} className="text-blue-900 mb-4">
+        🎲 Nombre aléatoire depuis l'API
       </Heading>
+      <Typography variant="muted" size="sm" className="mb-6">
+        Générez un nombre aléatoire et découvrez instantanément s'il est premier
+      </Typography>
       
       <div className="flex flex-col sm:flex-row gap-4 items-center">
         <Button onClick={handleFetchNumber} disabled={isLoading}>
@@ -42,9 +45,9 @@ export function ApiNumberGenerator() {
         </Button>
         
         {isError && (
-          <Text variant="error">
+          <Typography variant="error">
             Erreur : {error?.message || "Une erreur est survenue"}
-          </Text>
+          </Typography>
         )}
       </div>
     </Card>

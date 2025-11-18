@@ -1,8 +1,8 @@
 /**
- * Atom: Text
- * Composant Text réutilisable avec différentes variantes
+ * Atom: Typography
+ * Composant Typography réutilisable avec différentes variantes
  */
-export function Text({ children, variant = "default", size = "base", className = "" }) {
+export function Typography({ children, variant = "default", size = "base", className = "" }) {
   const variantClasses = {
     default: "text-gray-800",
     muted: "text-gray-600",

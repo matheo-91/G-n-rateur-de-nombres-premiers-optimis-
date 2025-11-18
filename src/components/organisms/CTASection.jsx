@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Heading, Text } from "../atoms/index.js";
+import { Heading, Typography } from "../atoms/index.js";
 import { CTAButton } from "../molecules/index.js";
 
 /**
@@ -12,9 +12,9 @@ export function CTASection({ title, description, buttonText, buttonLink }) {
       <Heading level={2} className="mb-4">
         {title}
       </Heading>
-      <Text variant="white" size="lg" className="text-blue-100 mb-8 max-w-2xl mx-auto">
+      <Typography variant="white" size="lg" className="text-blue-100 mb-8 max-w-2xl mx-auto">
         {description}
-      </Text>
+      </Typography>
       <Link to={buttonLink}>
         <CTAButton>
           {buttonText}
