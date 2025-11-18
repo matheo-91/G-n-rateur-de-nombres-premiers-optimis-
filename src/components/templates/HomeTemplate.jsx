@@ -1,5 +1,6 @@
 import { Container } from "../atoms/index.js";
-import { Header, Hero, FeaturesGrid, HowItWorksSection, CTASection } from "../organisms/index.js";
+import { Hero, FeaturesGrid, HowItWorksSection, CTASection } from "../organisms/index.js";
+import { Layout } from "./Layout.jsx";
 
 /**
  * Template: HomeTemplate
@@ -12,9 +13,8 @@ export function HomeTemplate({
   ctaData 
 }) {
   return (
-    <>
-      <Header />
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-blue-100 to-blue-200">
+    <Layout>
+      <div className="bg-gradient-to-br from-blue-50 via-blue-100 to-blue-200">
         <Container className="py-16 sm:py-24">
           <Hero {...heroData} />
           <FeaturesGrid features={features} />
@@ -22,7 +22,7 @@ export function HomeTemplate({
           <CTASection {...ctaData} />
         </Container>
       </div>
-    </>
+    </Layout>
   );
 }
 

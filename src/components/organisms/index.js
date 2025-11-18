@@ -8,4 +8,5 @@ export { CTASection } from './CTASection.jsx';
 export { PrimeChecker } from './PrimeChecker.jsx';
 export { ApiNumberGenerator } from './ApiNumberGenerator.jsx';
 export { Header } from './Header.jsx';
+export { Footer } from './Footer.jsx';
 

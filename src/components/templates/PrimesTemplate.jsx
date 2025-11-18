@@ -1,5 +1,6 @@
 import { Heading, Container } from "../atoms/index.js";
-import { Header, ApiNumberGenerator, PrimeChecker } from "../organisms/index.js";
+import { ApiNumberGenerator, PrimeChecker } from "../organisms/index.js";
+import { Layout } from "./Layout.jsx";
 
 /**
  * Template: PrimesTemplate
@@ -7,9 +8,8 @@ import { Header, ApiNumberGenerator, PrimeChecker } from "../organisms/index.js"
  */
 export function PrimesTemplate() {
   return (
-    <>
-      <Header />
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-blue-100 to-blue-200">
+    <Layout>
+      <div className="bg-gradient-to-br from-blue-50 via-blue-100 to-blue-200">
         <Container className="py-12 sm:py-16">
           <div className="max-w-4xl mx-auto fade-in">
             <Heading level={1} centered className="text-blue-900 mb-4">
@@ -26,7 +26,7 @@ export function PrimesTemplate() {
           </div>
         </Container>
       </div>
-    </>
+    </Layout>
   );
 }
 
