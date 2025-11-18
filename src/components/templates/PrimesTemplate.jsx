@@ -7,9 +7,9 @@ import { ApiNumberGenerator, PrimeChecker } from "../organisms/index.js";
  */
 export function PrimesTemplate() {
   return (
-    <div className="min-h-screen bg-gray-100 dark:bg-gray-900 py-8 px-4">
+    <div className="min-h-screen bg-gray-100 py-8 px-4">
       <div className="max-w-4xl mx-auto">
-        <Heading level={1} centered className="text-gray-800 dark:text-white mb-8">
+        <Heading level={1} centered className="text-gray-800 mb-8">
           Générateur de Nombres Premiers
         </Heading>
 

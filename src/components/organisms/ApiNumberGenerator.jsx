@@ -32,7 +32,7 @@ export function ApiNumberGenerator() {
 
   return (
     <Card>
-      <Heading level={2} className="text-gray-800 dark:text-white mb-4">
+      <Heading level={2} className="text-gray-800 mb-4">
         Nombre aléatoire depuis l'API
       </Heading>
       

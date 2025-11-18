@@ -14,7 +14,7 @@ export function Button({
   
   const variantClasses = {
     primary: "bg-blue-600 text-white hover:bg-blue-700 disabled:bg-gray-400 disabled:cursor-not-allowed",
-    secondary: "bg-gray-200 text-gray-800 hover:bg-gray-300 dark:bg-gray-700 dark:text-gray-200 dark:hover:bg-gray-600",
+    secondary: "bg-gray-200 text-gray-800 hover:bg-gray-300",
     danger: "bg-red-600 text-white hover:bg-red-700 disabled:bg-gray-400 disabled:cursor-not-allowed",
   };
 

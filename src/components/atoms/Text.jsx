@@ -4,11 +4,11 @@
  */
 export function Text({ children, variant = "default", size = "base", className = "" }) {
   const variantClasses = {
-    default: "text-gray-800 dark:text-white",
-    muted: "text-gray-600 dark:text-gray-400",
+    default: "text-gray-800",
+    muted: "text-gray-600",
     primary: "text-blue-700",
-    success: "text-green-600 dark:text-green-400",
-    error: "text-red-600 dark:text-red-400",
+    success: "text-green-600",
+    error: "text-red-600",
     white: "text-white",
   };
 

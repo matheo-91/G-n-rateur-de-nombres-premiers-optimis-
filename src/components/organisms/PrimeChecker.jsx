@@ -33,7 +33,7 @@ export function PrimeChecker() {
   return (
     <div className="space-y-6">
       <Card>
-        <Heading level={2} className="text-gray-800 dark:text-white mb-4">
+        <Heading level={2} className="text-gray-800 mb-4">
           Vérifier un nombre manuellement
         </Heading>
         
